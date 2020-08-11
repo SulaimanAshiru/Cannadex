@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/v1"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toStartOf="@id/v2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/v2"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/v3"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toStartOf="@id/v4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v1" />
+
+        <include
+            android:id="@+id/v4"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v3"
+            app:layout_constraintTop_toBottomOf="@id/v2" />
+
+        <include
+            android:id="@+id/v5"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toStartOf="@id/v6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v3" />
+
+        <include
+            android:id="@+id/v6"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v5"
+            app:layout_constraintTop_toBottomOf="@id/v4" />
+
+
+        <include
+            android:id="@+id/v7"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toStartOf="@id/v8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/v5" />
+
+        <include
+            android:id="@+id/v8"
+            layout="@layout/loader_item_cannabis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/v7"
+            app:layout_constraintTop_toBottomOf="@id/v6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>
