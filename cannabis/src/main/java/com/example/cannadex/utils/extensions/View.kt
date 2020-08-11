@@ -25,9 +25,8 @@ fun ImageView.loadUrl(url: String?) {
         .into(this)
 }
 
-fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int, type: Int) -> Unit): T {
+fun <T : RecyclerView.ViewHolder> T.listen(event: (position: Int) -> Unit) = this.also {
     itemView.setOnClickListener {
-        event.invoke(adapterPosition, itemViewType)
+        event.invoke(adapterPosition)
     }
-    return this
 }
