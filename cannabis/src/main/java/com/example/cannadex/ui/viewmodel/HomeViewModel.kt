@@ -25,7 +25,7 @@ class HomeViewModel : ViewModel() {
         toggleLoading(_strains)
         viewModelScope.launch {
             CannabisRepo.getInstance().getStrains().let { response ->
-
+                handleResponse(_strains, response)
             }
         }
     }
