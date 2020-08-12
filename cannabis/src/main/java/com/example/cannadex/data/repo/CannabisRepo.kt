@@ -10,4 +10,8 @@ class CannabisRepo {
     }
 
     suspend fun getStrains() = CannabisServiceImpl.getInstance().getStrains()
+
+    suspend fun getStrains(url: String) = CannabisServiceImpl.getInstance().getStrains(url)
+
+    suspend fun getStrains(pageNum: Int) = CannabisServiceImpl.getInstance().getStrains(pageNum)
 }
