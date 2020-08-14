@@ -9,11 +9,14 @@ import retrofit2.http.Url
 interface CannabisService {
 
     @GET("strains")
-    suspend fun getStrains(): Response<StrainsResponse>
+    suspend fun getStrains(@Query("count") count: Int): Response<StrainsResponse>
 
     @GET("strains")
-    suspend fun getStrains(@Query("page") pageNum: Int): Response<StrainsResponse>
+    suspend fun getStrains(
+        @Query("page") pageNum: Int,
+        @Query("count") count: Int
+    ): Response<StrainsResponse>
 
     @GET
-    suspend fun getStrains(@Url url: String): Response<StrainsResponse>
+    suspend fun getStrains(@Url url: String, @Query("count") count: Int): Response<StrainsResponse>
 }
