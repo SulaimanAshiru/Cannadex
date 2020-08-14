@@ -1,6 +1,7 @@
 package com.example.cannadex.data.api
 
 import com.example.cannadex.utils.ForceToGeneticsJsonAdapter
+import com.example.cannadex.utils.ForceToLineageJsonAdapter
 import com.example.cannadex.utils.ForceToListJsonAdapter
 import com.example.cannadex.utils.ForceToStringJsonAdapter
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
@@ -21,6 +22,7 @@ object RetrofitInstance {
     private val moshi by lazy {
         Moshi.Builder()
             .add(ForceToGeneticsJsonAdapter())
+            .add(ForceToLineageJsonAdapter())
             .add(ForceToStringJsonAdapter())
             .add(ForceToListJsonAdapter())
             .build()

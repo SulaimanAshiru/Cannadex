@@ -7,10 +7,10 @@ class CannabisServiceImpl : CannabisService {
         fun getInstance() = INSTANCE ?: CannabisServiceImpl().also { INSTANCE = it }
     }
 
-    override suspend fun getStrains() = RetrofitInstance.cannabisService.getStrains()
+    override suspend fun getStrains(count: Int) = RetrofitInstance.cannabisService.getStrains(count)
 
-    override suspend fun getStrains(pageNum: Int) =
-        RetrofitInstance.cannabisService.getStrains(pageNum)
+    override suspend fun getStrains(pageNum: Int, count: Int) =
+        RetrofitInstance.cannabisService.getStrains(pageNum, count)
 
-    override suspend fun getStrains(url: String) = RetrofitInstance.cannabisService.getStrains(url)
+    override suspend fun getStrains(url: String, count: Int) = RetrofitInstance.cannabisService.getStrains(url, count)
 }
